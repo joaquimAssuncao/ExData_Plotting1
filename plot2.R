@@ -12,5 +12,5 @@ Plot2 <- function() {
   relevant <- hpc[as.Date(dmy(hpc$Date)) == as.Date("2007-02-01") | as.Date(dmy(hpc$Date)) == as.Date("2007-02-02"),c(1:3)]
   relevant$Date <- dmy(relevant$Date)
   relevant_dt <- paste(relevant$Date,relevant$Time)
-  plot(ymd_hms(relevant_dt), as.numeric(as.character(relevant$Global_active_power)),pch="l",ylab="Global Active Power (Kilowats)")
+  plot(ymd_hms(relevant_dt), as.numeric(as.character(relevant$Global_active_power)),pch="l",xlab="",ylab="Global Active Power (Kilowats)")
 }
